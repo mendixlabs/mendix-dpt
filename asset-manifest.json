@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/mendix-dpt/static/css/main.d12dadd1.chunk.css",
+    "main.js": "/mendix-dpt/static/js/main.be2bf4d5.chunk.js",
+    "main.js.map": "/mendix-dpt/static/js/main.be2bf4d5.chunk.js.map",
+    "runtime-main.js": "/mendix-dpt/static/js/runtime-main.f4bc9339.js",
+    "runtime-main.js.map": "/mendix-dpt/static/js/runtime-main.f4bc9339.js.map",
+    "static/css/2.79110200.chunk.css": "/mendix-dpt/static/css/2.79110200.chunk.css",
+    "static/js/2.8efbff41.chunk.js": "/mendix-dpt/static/js/2.8efbff41.chunk.js",
+    "static/js/2.8efbff41.chunk.js.map": "/mendix-dpt/static/js/2.8efbff41.chunk.js.map",
+    "index.html": "/mendix-dpt/index.html",
+    "precache-manifest.8945a510395d0a44304aa48fa2bb354f.js": "/mendix-dpt/precache-manifest.8945a510395d0a44304aa48fa2bb354f.js",
+    "service-worker.js": "/mendix-dpt/service-worker.js",
+    "static/css/2.79110200.chunk.css.map": "/mendix-dpt/static/css/2.79110200.chunk.css.map",
+    "static/css/main.d12dadd1.chunk.css.map": "/mendix-dpt/static/css/main.d12dadd1.chunk.css.map",
+    "static/js/2.8efbff41.chunk.js.LICENSE.txt": "/mendix-dpt/static/js/2.8efbff41.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/mendix-dpt/static/media/roboto-latin-900-normal.bb1e4dc6.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f4bc9339.js",
+    "static/css/2.79110200.chunk.css",
+    "static/js/2.8efbff41.chunk.js",
+    "static/css/main.d12dadd1.chunk.css",
+    "static/js/main.be2bf4d5.chunk.js"
+  ]
+}
