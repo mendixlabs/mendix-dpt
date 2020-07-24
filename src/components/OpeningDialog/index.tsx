@@ -147,7 +147,7 @@ const OpeningDialog: FC<ConfirmDialogProps> = observer(({ open, onClose }) => {
                                     startIcon={<CloudUploadOutlinedIcon />}
                                     className={classes.introButton}
                                 >
-                                    Upload
+                                    Load local file
                                 </Button>
                             </label>
                         </div>
