@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "59c1e58ff71a0078fe0404e0a7128d7b",
+    "revision": "cc154eb2fee18bc083312cfc6b6d4b19",
     "url": "/mendix-dpt/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/mendix-dpt/static/css/2.79110200.chunk.css"
   },
   {
-    "revision": "057106f214ac7be64e8b",
+    "revision": "42ddc0d89a1426691748",
     "url": "/mendix-dpt/static/css/main.d12dadd1.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/mendix-dpt/static/js/2.d5afb861.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "057106f214ac7be64e8b",
-    "url": "/mendix-dpt/static/js/main.2c9b7785.chunk.js"
+    "revision": "42ddc0d89a1426691748",
+    "url": "/mendix-dpt/static/js/main.9ce734e1.chunk.js"
   },
   {
     "revision": "71bebe9edfd83f007395",
