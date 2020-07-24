@@ -1,0 +1,14 @@
+version: "~> 1.0"
+sudo: true
+dist: bionic
+language: node_js
+node_js: 13
+branches:
+  only:
+    - master
+cache: yarn
+install:
+  - yarn install
+script:
+  - yarn lint
+  - yarn test:coverage

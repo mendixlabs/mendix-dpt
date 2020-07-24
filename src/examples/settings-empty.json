@@ -1,0 +1,9 @@
+{
+    "pageTemplates": "WebModeler",
+    "cssFiles": [
+        "styles/web/css/main.css"
+    ],
+    "designProperties": {
+
+    }
+}
