@@ -27,6 +27,8 @@
         "build": "react-app-rewired build",
         "test": "react-app-rewired test",
         "eject": "react-scripts eject",
+        "predeploy": "yarn run build",
+        "deploy": "gh-pages -d build",
         "test:coverage": "yarn test --watchAll false --coverage",
         "lint": "tsc --noEmit && eslint '*/**/*.{ts,tsx}'",
         "lint:fix": "yarn lint --quiet --fix"
