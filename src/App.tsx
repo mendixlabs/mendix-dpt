@@ -35,7 +35,7 @@ const App = observer(() => {
 
     const classes = useStyles(theme);
     const [addDialogOpen, setAddDialogOpen] = useState(false);
-    const [openingDialog, switchOpeningDialog] = useState(false);
+    const [openingDialog, switchOpeningDialog] = useState(true);
 
     const onAddProp = (value: string) => {
         if (value) {
