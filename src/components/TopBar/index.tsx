@@ -23,7 +23,7 @@ import HomeOutlinedIcon from "@material-ui/icons/HomeOutlined";
 import { saveAs } from "file-saver";
 import copy from "copy-to-clipboard";
 
-import { useStyles } from "../../styling/App";
+import { useStyles } from "./style";
 import { useStores } from "../../hooks/use-stores";
 import { PropertiesType } from "store/properties-store";
 

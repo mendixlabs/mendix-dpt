@@ -12,7 +12,6 @@ export const useStyles = makeStyles((theme: Theme) => ({
         overflow: "hidden",
     },
     leftColumn: {
-        //backgroundColor: "#CCC",
         maxWidth: "50%",
         height: "100vh",
         overflowX: "hidden",
@@ -30,28 +29,4 @@ export const useStyles = makeStyles((theme: Theme) => ({
         overflowX: "hidden",
         overflowY: "auto",
     },
-    appBar: {},
-    toolBar: {
-        paddingLeft: theme.spacing(2),
-    },
-    toolBarIcon: {
-        color: theme.palette.common.white,
-    },
-    formControlTopBar: {
-        margin: theme.spacing(1),
-        // minWidth: 120,
-    },
-    formControlTopBarInput: {
-        color: theme.palette.common.white,
-        marginTop: 0,
-    },
-
-    title: {
-        flexGrow: 1,
-    },
-
-    classInput: {
-        padding: theme.spacing(2),
-    },
-    jsonPretty: {},
 }));
