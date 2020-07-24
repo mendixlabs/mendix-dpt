@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/mendix-dpt/static/css/main.d12dadd1.chunk.css",
-    "main.js": "/mendix-dpt/static/js/main.d0abdfcd.chunk.js",
-    "main.js.map": "/mendix-dpt/static/js/main.d0abdfcd.chunk.js.map",
+    "main.js": "/mendix-dpt/static/js/main.56b3a872.chunk.js",
+    "main.js.map": "/mendix-dpt/static/js/main.56b3a872.chunk.js.map",
     "runtime-main.js": "/mendix-dpt/static/js/runtime-main.f4bc9339.js",
     "runtime-main.js.map": "/mendix-dpt/static/js/runtime-main.f4bc9339.js.map",
     "static/css/2.79110200.chunk.css": "/mendix-dpt/static/css/2.79110200.chunk.css",
     "static/js/2.d5afb861.chunk.js": "/mendix-dpt/static/js/2.d5afb861.chunk.js",
     "static/js/2.d5afb861.chunk.js.map": "/mendix-dpt/static/js/2.d5afb861.chunk.js.map",
     "index.html": "/mendix-dpt/index.html",
-    "precache-manifest.9033cde487649f810c971971d0d8c616.js": "/mendix-dpt/precache-manifest.9033cde487649f810c971971d0d8c616.js",
+    "precache-manifest.11102c94dc80d66d1660279ea76c608a.js": "/mendix-dpt/precache-manifest.11102c94dc80d66d1660279ea76c608a.js",
     "service-worker.js": "/mendix-dpt/service-worker.js",
     "static/css/2.79110200.chunk.css.map": "/mendix-dpt/static/css/2.79110200.chunk.css.map",
     "static/css/main.d12dadd1.chunk.css.map": "/mendix-dpt/static/css/main.d12dadd1.chunk.css.map",
@@ -21,6 +21,6 @@
     "static/css/2.79110200.chunk.css",
     "static/js/2.d5afb861.chunk.js",
     "static/css/main.d12dadd1.chunk.css",
-    "static/js/main.d0abdfcd.chunk.js"
+    "static/js/main.56b3a872.chunk.js"
   ]
 }
