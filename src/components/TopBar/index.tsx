@@ -59,7 +59,7 @@ const TopBar: FC<{ onHomeClick: () => void }> = observer(({ onHomeClick }) => {
     const onDownloadClick = () => {
         const jsonString = JSON.stringify(propertiesStore.JSOBject, null, 4);
         const blob = new Blob([jsonString], { type: "application/json;charset=utf-8" });
-        saveAs(blob, "settings.json");
+        saveAs(blob, propertiesStore.type === "Native" ? "settings-native.json" : "settings.json");
     };
 
     const handleChange = (event: ChangeEvent<{ name?: string | undefined; value: unknown }>) => {
