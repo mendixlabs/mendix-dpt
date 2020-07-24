@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/mendix-dpt/precache-manifest.8361d06a3c7810f8f6e2e80366a454cc.js"
+  "/mendix-dpt/precache-manifest.cdd34bda835f689fae87df04ab581a76.js"
 );
 
 self.addEventListener('message', (event) => {
