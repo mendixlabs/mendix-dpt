@@ -29,7 +29,8 @@ const localStyles = makeStyles(() => ({
 
 const Property: FC<{
     property: DropdownDesignProperty | ToggleDesignProperty;
-}> = observer(({ property }) => {
+    element: string;
+}> = observer(({ property, element }) => {
     const { propertiesStore } = useStores();
     const classes = useStyles();
     const localClasses = localStyles({ ignored: property.ignored });
@@ -86,6 +87,7 @@ const Property: FC<{
             </Collapse>
             <EditPropertyDialog
                 open={editDialog}
+                element={element}
                 onClose={() => toggleEditDialog(false)}
                 initialName={property.name}
                 initialDesciption={property.description}

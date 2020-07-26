@@ -31,8 +31,8 @@ const PropertyList = observer(() => {
             localStore.editDialog = state;
         },
         toggleAdd(state: boolean, selectedProp: string) {
-            localStore.newPropDialog = state;
             localStore.selectedProp = selectedProp;
+            localStore.newPropDialog = state;
         },
         initDialog(name: string) {
             localStore.initialValue = name;
@@ -135,6 +135,7 @@ const PropertyList = observer(() => {
             />
             <EditPropertyDialog
                 open={localStore.newPropDialog}
+                element={localStore.selectedProp}
                 onClose={() => localStore.toggleAdd(false, "")}
                 onProceed={createProperty}
             />

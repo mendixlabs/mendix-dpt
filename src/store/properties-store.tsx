@@ -243,6 +243,19 @@ export class PropertiesStore {
         return this.properties.size === 0;
     }
 
+    @computed
+    get classList() {
+        return this.propertyList
+            .map(el =>
+                el.properties.map(prop => {
+                    return prop instanceof DropdownDesignProperty
+                        ? prop.options.map(opt => opt.className)
+                        : [prop.className];
+                }),
+            )
+            .flat(2);
+    }
+
     private propList(key: string, copy = true) {
         const list = this.properties.get(key) as Array<DropdownDesignProperty | ToggleDesignProperty>;
         return copy ? [...list] : list;
@@ -256,5 +269,12 @@ export class PropertiesStore {
             });
         });
         return returnMap;
+    }
+
+    public propNames(key: string) {
+        if (this.properties.has(key)) {
+            return this.propList(key).map(prop => prop.name);
+        }
+        return [];
     }
 }

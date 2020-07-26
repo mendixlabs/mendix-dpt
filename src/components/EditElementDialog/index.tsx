@@ -4,6 +4,7 @@ import { Dialog, DialogTitle, DialogContent, DialogActions, Button } from "@mate
 import { ValidatorForm, TextValidator } from "react-material-ui-form-validator";
 import { useStyles } from "./style";
 import { DESIGN_PROPERTY_RULE } from "../../util/validationRules";
+import { useStores } from "../../hooks/use-stores";
 
 export interface EditSimpleDialogProps {
     open: boolean;
@@ -25,6 +26,7 @@ export const EditSimpleDialog: FC<EditSimpleDialogProps> = ({
     const classes = useStyles();
     const [name, setName] = useState(initialValue || "");
     const field = fieldName || "Name";
+    const { propertiesStore } = useStores();
 
     useEffect(() => {
         setName(initialValue || "");
@@ -32,6 +34,19 @@ export const EditSimpleDialog: FC<EditSimpleDialogProps> = ({
             setName("");
         };
     }, [open, initialValue]);
+
+    useEffect(() => {
+        ValidatorForm.addValidationRule("elementName", (value: string) => {
+            if (value && value !== initialValue && propertiesStore.keys.includes(value)) {
+                return false;
+            }
+            return true;
+        });
+        const cleanup = () => {
+            ValidatorForm.removeValidationRule("elementName");
+        };
+        return cleanup;
+    });
 
     const onChange = (e: React.FormEvent<HTMLInputElement>) => {
         const target = e.target as HTMLInputElement;
@@ -62,8 +77,12 @@ export const EditSimpleDialog: FC<EditSimpleDialogProps> = ({
                         onChange={onChange}
                         name="editDialogField1"
                         value={name}
-                        validators={["required", DESIGN_PROPERTY_RULE.rule]}
-                        errorMessages={[`${field} is required`, DESIGN_PROPERTY_RULE.error]}
+                        validators={["required", "elementName", DESIGN_PROPERTY_RULE.rule]}
+                        errorMessages={[
+                            `${field} is required`,
+                            `Element with name '${name}' already exists`,
+                            DESIGN_PROPERTY_RULE.error,
+                        ]}
                     />
                 </DialogContent>
                 <DialogActions>
@@ -78,14 +97,3 @@ export const EditSimpleDialog: FC<EditSimpleDialogProps> = ({
         </Dialog>
     );
 };
-
-// useEffect(() => {
-//     ValidatorForm.addValidationRule("test", (value: string) => {
-//         // console.log("test", value);
-//         return true;
-//     });
-//     const cleanup = () => {
-//         ValidatorForm.removeValidationRule("test");
-//     };
-//     return cleanup;
-// });

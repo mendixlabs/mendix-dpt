@@ -14,9 +14,12 @@ import {
 import { ValidatorForm, TextValidator } from "react-material-ui-form-validator";
 import { useStyles } from "./style";
 import { DesignPropertyType } from "../../store/objects/design-property";
+import { useStores } from "../../hooks/use-stores";
 
 export interface EditPropertyDialogProps {
     open: boolean;
+
+    element: string;
 
     initialName?: string | null;
     initialDesciption?: string | null;
@@ -28,6 +31,7 @@ export interface EditPropertyDialogProps {
 
 export const EditPropertyDialog: FC<EditPropertyDialogProps> = ({
     open,
+    element,
     initialName,
     initialDesciption,
     initialType,
@@ -40,6 +44,8 @@ export const EditPropertyDialog: FC<EditPropertyDialogProps> = ({
     const [desciption, setDescription] = useState(initialDesciption || "");
     const [type, setType] = useState<DesignPropertyType>("Dropdown");
 
+    const { propertiesStore } = useStores();
+
     useEffect(() => {
         setName(initialName || "");
         setDescription(initialDesciption || "");
@@ -50,6 +56,20 @@ export const EditPropertyDialog: FC<EditPropertyDialogProps> = ({
             setType("Dropdown");
         };
     }, [open, initialName, initialDesciption, initialType]);
+
+    useEffect(() => {
+        ValidatorForm.addValidationRule("propName", (value: string) => {
+            const keys = element ? propertiesStore.propNames(element) : [];
+            if (element && value && value !== initialName && keys.includes(value)) {
+                return false;
+            }
+            return true;
+        });
+        const cleanup = () => {
+            ValidatorForm.removeValidationRule("propName");
+        };
+        return cleanup;
+    });
 
     const onChangeName = (e: React.FormEvent<HTMLInputElement>) => {
         const target = e.target as HTMLInputElement;
@@ -106,8 +126,11 @@ export const EditPropertyDialog: FC<EditPropertyDialogProps> = ({
                         onChange={onChangeName}
                         name="editDialogField1"
                         value={name}
-                        validators={["required"]}
-                        errorMessages={[`Name is required`]}
+                        validators={["required", "propName"]}
+                        errorMessages={[
+                            `Name is required`,
+                            `You already have a propery with the name '${name}' in '${element}'`,
+                        ]}
                     />
                     <TextValidator
                         className={classes.textFieldEditProperty}

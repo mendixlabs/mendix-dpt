@@ -90,7 +90,7 @@ const Item: FC<{
                                                         {...providedInner.draggableProps}
                                                         {...providedInner.dragHandleProps}
                                                     >
-                                                        <Property property={prop} />
+                                                        <Property property={prop} element={name} />
                                                     </div>
                                                 )}
                                             </Draggable>
