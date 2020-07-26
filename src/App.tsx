@@ -64,7 +64,12 @@ const App = observer(() => {
                             </Fab>
                         </Grid>
                         <Grid item xs className={classes.rightColumn}>
-                            <JSONPretty data={propertiesStore.JSOBject} />
+                            <Grid item className={classes.jsonBox}>
+                                <JSONPretty data={propertiesStore.JSOBject} />
+                            </Grid>
+                            <Grid item className={classes.classesBox}>
+                                Classes
+                            </Grid>
                         </Grid>
                     </Grid>
                 </div>

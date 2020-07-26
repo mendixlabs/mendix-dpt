@@ -27,6 +27,14 @@ export const useStyles = makeStyles((theme: Theme) => ({
         maxWidth: "50%",
         height: "100vh",
         overflowX: "hidden",
+        overflowY: "hidden",
+    },
+    jsonBox: {
+        height: "50vh",
+        overflowX: "hidden",
         overflowY: "auto",
+    },
+    classesBox: {
+        height: "50vh",
     },
 }));
