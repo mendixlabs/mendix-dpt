@@ -123,6 +123,7 @@ export const EditPropertyDialog: FC<EditPropertyDialogProps> = ({
                         className={classes.textFieldEditProperty}
                         label={"Name"}
                         fullWidth
+                        autoFocus
                         onChange={onChangeName}
                         name="editDialogField1"
                         value={name}
