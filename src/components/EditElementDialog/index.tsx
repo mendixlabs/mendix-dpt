@@ -74,6 +74,7 @@ export const EditSimpleDialog: FC<EditSimpleDialogProps> = ({
                         className={classes.textFieldEdit}
                         label={field}
                         fullWidth
+                        autoFocus
                         onChange={onChange}
                         name="editDialogField1"
                         value={name}
