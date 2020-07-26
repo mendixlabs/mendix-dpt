@@ -249,8 +249,8 @@ export class PropertiesStore {
             .map(el =>
                 el.properties.map(prop => {
                     return prop instanceof DropdownDesignProperty
-                        ? prop.options.map(opt => opt.className)
-                        : [prop.className];
+                        ? prop.options.map(opt => ({ el: el.name, prop: prop.name, class: opt.className }))
+                        : [{ el: el.name, prop: prop.name, class: prop.className }];
                 }),
             )
             .flat(2);

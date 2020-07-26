@@ -4,7 +4,7 @@ import { observer } from "mobx-react";
 import "./styling/App.scss";
 
 import { StylesProvider, ThemeProvider } from "@material-ui/styles";
-import { CssBaseline, Grid, Fab } from "@material-ui/core";
+import { CssBaseline, Grid, Fab, Box } from "@material-ui/core";
 import { createMuiTheme } from "@material-ui/core/styles";
 import JSONPretty from "react-json-pretty";
 import "react-json-pretty/themes/adventure_time.css";
@@ -17,6 +17,7 @@ import PropertyList from "components/PropertyList";
 import TopBar from "components/TopBar";
 import { EditSimpleDialog } from "components/EditElementDialog";
 import OpeningDialog from "components/OpeningDialog";
+import ClassesBox from "./components/ClassesBox/index";
 
 const App = observer(() => {
     const { appStore, propertiesStore } = useStores();
@@ -64,12 +65,14 @@ const App = observer(() => {
                             </Fab>
                         </Grid>
                         <Grid item xs className={classes.rightColumn}>
-                            <Grid item className={classes.jsonBox}>
-                                <JSONPretty data={propertiesStore.JSOBject} />
-                            </Grid>
-                            <Grid item className={classes.classesBox}>
-                                Classes
-                            </Grid>
+                            <Box display="flex" flexDirection="column" style={{ maxHeight: "100%" }}>
+                                <Box p={1} flexGrow={0} className={classes.jsonBox}>
+                                    <JSONPretty data={propertiesStore.JSOBject} />
+                                </Box>
+                                <Box p={1} className={classes.classesBox}>
+                                    <ClassesBox />
+                                </Box>
+                            </Box>
                         </Grid>
                     </Grid>
                 </div>

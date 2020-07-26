@@ -30,11 +30,10 @@ export const useStyles = makeStyles((theme: Theme) => ({
         overflowY: "hidden",
     },
     jsonBox: {
-        height: "50vh",
-        overflowX: "hidden",
+        padding: 0,
         overflowY: "auto",
     },
     classesBox: {
-        height: "50vh",
+        paddingLeft: 0,
     },
 }));
