@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "646d95591edbb75c762a92b7c466977f",
+    "revision": "0e2d66f6df88eda6db62ae0751f9ba5d",
     "url": "/mendix-dpt/index.html"
   },
   {
